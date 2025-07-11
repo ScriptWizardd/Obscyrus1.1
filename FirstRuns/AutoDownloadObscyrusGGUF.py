@@ -1,8 +1,12 @@
 import os
 from huggingface_hub import hf_hub_download, login
 
-# Log in with the provided read-only token (optional for public repos, but included for safety)
-login(token="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")
+# Get token from environment variable (set via export HF_TOKEN="your_token_here")
+hf_token = os.getenv('HF_TOKEN')
+if hf_token:
+    login(token=hf_token)
+else:
+    print("Warning: No HF_TOKEN environment variable set. Assuming public repo access.")
 
 # Repository details
 repo_id = "ScriptWizarddd/Obscyrus-8B-ClaudeFT"  # Adjust if the username or repo name changes
@@ -17,7 +21,7 @@ local_filepath = hf_hub_download(
     repo_id=repo_id,
     filename=filename,
     local_dir=download_dir,
-    token="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"  # Use token again if needed
+    token=hf_token  # Use token if set
 )
 
 print(f"Model downloaded to: {local_filepath}")
