@@ -5,8 +5,9 @@ Overview
 
 
 Obscyrus 1.1 is a state-of-the-art local offline Large Language Model (LLM) designed for seamless, self-contained AI interactions. Built on a Mixture of Experts (MoE) 
-Qwen3 8B model and fine-tuned on Claude 4 Opus data, Obscyrus excels in generating, editing, and optimizing code for offline web applications. It specializes in Python 
-backends (using frameworks like Flask and SocketIO) paired with HTML, CSS, and JavaScript frontends, leveraging JSON for efficient data storage and management.
+Llama3.2 8B model and fine-tuned on both Qwen3 and Claude 4 Opus data, Obscyrus excels in generating, editing, and optimizing code for offline web applications. It 
+specializes in Python backends (using frameworks like Flask and SocketIO) paired with HTML, CSS, and JavaScript frontends, leveraging JSON for efficient data storage and 
+management.
 
 This repository contains everything needed to run Obscyrus fully offline — no internet required after initial setup. Obscyrus can code new projects, edit workspace files, 
 save conversations for future reference, and maintain memory across sessions, making it an ideal tool for developers building isolated, performant applications.
